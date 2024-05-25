@@ -1,2 +1,32 @@
-# SurNameChanger4Tg
-Name and Surname cyclic changer for telegram
+#SurName-Changer
+SurName-Changer — это проект на Python, использующий библиотеку Pyrogram для автоматического изменения имени и фамилии пользователя в Telegram. Проект написан с использованием принципов объектно-ориентированного программирования (ООП) для улучшения структуры и поддержки кода.
+
+**Установка**
+*Склонируйте репозиторий:*
+git clone https://github.com/yourusername/SurName-Changer.git
+
+cd SurName-Changer
+
+**Настройка**
+Получите api_id и api_hash от Telegram API.
+Обновите файл config.py или замените параметры в коде на ваши api_id и api_hash.
+**Использование**
+
+*Запустите скрипт:*
+
+python main.py
+
+Скрипт автоматически изменит ваше имя и фамилию в Telegram на значения из списка name_surname_pairs, с интервалом в 5 секунд.
+
+
+**Описание класса** *NameSurnameChanger*
+Класс NameSurnameChanger отвечает за все основные функции проекта.
+
+**Методы**
+
+*__init__(self, api_id, api_hash, name_surname_pairs): Инициализация объекта с API идентификаторами и парами имя-фамилия.
+get_original_name_surname(self): Получение и сохранение текущего имени и фамилии пользователя.
+change_name_surname(self): Циклическое изменение имени и фамилии пользователя.
+restore_original_name_surname(self): Восстановление исходного имени и фамилии пользователя.
+signal_handler(self, sig, frame): Обработчик сигнала завершения программы для восстановления исходного состояния.
+run(self): Запуск основного процесса изменения имени и фамилии.*
